@@ -2,6 +2,7 @@ import asyncio
 from util import delay
 
 async def main() -> None:
+    # All three tasks will concurrently, not one by one
     sleep_for_three = asyncio.create_task(delay(3))
     sleep_again = asyncio.create_task(delay(3))
     sleep_once_more = asyncio.create_task(delay(3))
